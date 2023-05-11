@@ -35,7 +35,7 @@ const routes: Routes = [
     component: VegetableComponent
   },
   {
-    path: 'watch',
+    path: '',
     component: WatchComponent
   },
   {

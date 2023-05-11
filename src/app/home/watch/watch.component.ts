@@ -11,7 +11,7 @@ import { ProductService } from '../../shared/services/product.service';
 })
 export class WatchComponent implements OnInit, OnDestroy {
 
-  public themeLogo: string = 'assets/images/icon/logo-14.png'; // Change Logo
+  public themeLogo: string = 'assets/images/logo-deporinter.png'; // Change Logo
   
   public products: Product[] = [];
   public productCollections: any[] = [];
