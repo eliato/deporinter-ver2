@@ -11,7 +11,9 @@
     <div class="container">
         <div class="row">            
             <div class="col-sm-12">
-                <h2 class="text-center p-3">DEPORTES INTERNACIONALES</h2>               
+                <div class="title1 p-2">
+                    <h2 class="title-inner1 text-center ">DEPORTES INTERNACIONALES</h2>               
+                </div>
                 <p [ngStyle]="{'font-size': '2rem','line-height': '37px' }" class="p-3">
                     Somos una empresa dedicada a la venta y distribución de artículos deportivos de alta calidad, diseñados para satisfacer 
                     las necesidades de los deportistas más exigentes.<br>
@@ -24,14 +26,44 @@
     </div>
 </section>
 <!--  logo section start-->
-<section class="p-0">
+<section class="blog blog-bg section-b-space p-0 mb-5">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h2 class="text-center p-3">Nuestras Marcas</h2>  
-                <app-logo [logos]="logos"></app-logo>
+            <div class="col">
+                <div class="title1 p-2"> 
+                    <h2 class="title-inner1 text-center p-3">Nuestras Marcas</h2>  
+                </div>              
             </div>
         </div>
+        <div class="row ">
+            <div class="col-md-12">                
+                <owl-carousel-o  class="no-arrow">
+                    <ng-container>
+                      <ng-template carouselSlide>
+                        <div class="col-md-12">              
+                              <img [src]="'assets/images/slider/gola.png'" class="img-fluid" alt="blog">
+                              <span></span>
+                        </div>
+                      </ng-template>
+                      <ng-template carouselSlide>
+                        <div class="col-md-12">  
+                            <img [src]="'assets/images/slider/joma.png'" class="img-fluid" alt="blog">
+                            <span></span>
+                        </div>
+                      </ng-template>
+                      <ng-template carouselSlide>
+                        <div class="col-md-12">  
+                            <img [src]="'assets/images/slider/Wilson.png'" class="img-fluid" alt="blog">
+                            <span></span>
+                        </div>
+                      </ng-template>
+
+                    </ng-container>
+                  </owl-carousel-o>
+            </div>
+        </div>
+        <br>
+        <br>
     </div>
 </section>
 <!--  logo section End-->
