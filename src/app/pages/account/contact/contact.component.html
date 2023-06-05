@@ -51,26 +51,30 @@
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label for="name">Nombres</label>
-                            <input type="text" class="form-control" id="name" placeholder="Ingrese su Nombre" required="required">
+                            <input type="text" class="form-control" id="name" #nombre placeholder="Ingrese su Nombre" required="required">
                         </div>
                         <div class="col-md-6">
                             <label for="email">Apellidos</label>
-                            <input type="text" class="form-control" id="last-name" placeholder="Ingrese su Apellido" required="">
+                            <input type="text" class="form-control" id="last-name" #apellido placeholder="Ingrese su Apellido" required="">
                         </div>
                         <div class="col-md-6">
                             <label for="review">Telefono</label>
-                            <input type="text" class="form-control" id="review" placeholder="Ingrese su Telefono" required="">
+                            <input type="text" class="form-control" id="review" #telefono placeholder="Ingrese su Telefono" required="">
                         </div>
                         <div class="col-md-6">
                             <label for="email">Email</label>
-                            <input type="text" class="form-control" id="email" placeholder="Ingrese su Email" required="">
+                            <input type="text" class="form-control" id="email" #email placeholder="Ingrese su Email" required="">
                         </div>
                         <div class="col-md-12">
                             <label for="review">Mensaje</label>
-                            <textarea class="form-control" placeholder="Escriba su mensaje" id="exampleFormControlTextarea1" rows="6"></textarea>
+                            <textarea class="form-control" placeholder="Escriba su mensaje" #mensaje id="exampleFormControlTextarea1" rows="6"></textarea>
                         </div>
+                        <div class="alert alert-success" role="alert" *ngIf="menssaje">
+                            Gracias por ponerte en contacto con nosotros, te responderemos a la brevedad!
+                        </div>
+                        <div class="alert alert-danger" role="alert" *ngIf="alert">{{mensaje_alerta}}</div>
                         <div class="col-md-12">
-                            <button class="btn btn-solid" type="submit">Enviar</button>
+                            <button class="btn btn-solid" type="button" (click)="send()">Enviar</button>
                         </div>
                     </div>
                 </form>
